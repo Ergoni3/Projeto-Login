@@ -1,0 +1,16 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { LembrasComponent } from './Interacao/lembras/lembras.component';
+import {PagpComponent} from './Interacao/pagp/pagp.component';
+
+const routes: Routes = [
+  {path: 'lembra-senha', component: Lembras.component},
+  {path: 'pag-produtos', component: pagp.component}
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {  
+}
