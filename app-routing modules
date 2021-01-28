@@ -6,7 +6,7 @@ import {MenuComponent} from './navegacao/menu/menu.component'
 const routes: Routes = [
   { path: '', redirectTo: '/menu', pathMatch: 'full'},
   {path: 'lembras', component: LembrasComponent},
-  { path: 'Produtos', component: LembrasComponent }
+  { path: 'Produtos', component: PagpComponent }
 ];
 
 @NgModule({
