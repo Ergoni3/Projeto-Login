@@ -1,26 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './navegacao/header/header.component';
-import { FooterComponent } from './navegacao/footer/footer.component';
+import { RouterModule, Routes } from '@angular/router';
 import { LembrasComponent } from './Interacao/lembras/lembras.component';
-import { MenuComponent } from './navegacao/menu/menu.component';
-
+import { PagpComponent } from './Interacao/pagp/pagp.component';
+import {MenuComponent} from './navegacao/menu/menu.component'
+const routes: Routes = [
+  { path: '', redirectTo: '/menu', pathMatch: 'full'},
+  {path: 'lembras', component: LembrasComponent},
+  { path: 'Produtos', component: LembrasComponent }
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    LembrasComponent,
-    MenuComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppModule { }
+export class AppRoutingModule { 
+   
+}
